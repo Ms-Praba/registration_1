@@ -62,3 +62,4 @@ with tab2:
 				client.append_row([name, contact, email,gender,dob, username, password])
 
 				st.success("registeration successful")
+
