@@ -60,4 +60,5 @@ with tab2:
 				st.success("password does not match")
 			else:
 				client.append_row([name, contact, email,gender,dob, username, password])
+
 				st.success("registeration successful")
