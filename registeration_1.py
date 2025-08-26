@@ -5,7 +5,7 @@ import pandas as pd
 
 SCOPE=["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/drive"]
 @st.cache_resource
-def int_connection():
+def init_connection():
 	credentials=credentials.from_service_account_info(st.secrets["gcp_service_account"],scopes=SCOPE)
 	clients=gspread.authorize(credentials)
 	return clients
@@ -62,4 +62,5 @@ with tab2:
 				client.append_row([name, contact, email,gender,dob, username, password])
 
 				st.success("registeration successful")
+
 
